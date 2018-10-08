@@ -1,0 +1,48 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:u="sap.ui.unified"
+		controllerName="test_sap.page1" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Workflow Details">
+		<content>
+	<f:SimpleForm minWidth="-1" maxContainerCols="2"
+				editable="true" layout="ResponsiveGridLayout" LabelMinWidth="250"
+				columnsL="2" columnsM="2" labelSpanL="4" labelSpanM="2" emptySpanL="0"
+				emptySpanM="0">
+				<f:content>
+					<core:Title text="" width="200px" />
+					<Label text="Workflow Name" labelFor="wfName" />
+					<Input id="wfName" value="{/wfName}" />
+					<Label text="Workflow Type" labelFor="wfType" />
+					<Select id="wfType" change="onChangeOfWorkflowType"
+           	        autoAdjustWidth="true" items="{dropDownModel>/wfType}" selectedKey="0">
+           	        <core:Item key="{dropDownModel>text}" text="{dropDownModel>desc}" />
+        	        </Select>
+        	        <Label text="Delegator" labelFor="delegator" />
+					<Select id="delegator" change="onChangeOfDelegator"
+           	        autoAdjustWidth="true" items="{dropDownModel>/delegator}" selectedKey="0">
+           	        <core:Item key="{dropDownModel>text}" text="{dropDownModel>desc}" />
+        	        </Select>
+        	                               
+        	        <Label text="Privileges"/>
+        	        <RadioButtonGroup columns="3" width="500px" class="sapUiMediumMarginBottom">
+				     <buttons>
+					<RadioButton id="RB1-1" text="Default" enabled="true"/>
+					<RadioButton id="RB1-2" text="Custom" />
+					</buttons>
+					</RadioButtonGroup>
+					<Button  text="Add Workflow" tooltip="Add Workflow" icon="sap-icon://add" press="onAddItem" />
+                    <Label text=""/>
+                    <TextArea id="text"  visible="false"/> 
+			</f:content>
+        </f:SimpleForm>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button text="Accept" icon="sap-icon://accept" type='Accept' press='onSubmit' />
+					<Button text="Reject" icon="sap-icon://decline" type='Reject' />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+	
+</core:View>

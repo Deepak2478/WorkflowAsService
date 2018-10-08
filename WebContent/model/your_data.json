@@ -1,0 +1,50 @@
+{
+    "wfType": [
+    		{
+                "text": "",
+                "desc": ""
+            },
+            {
+                "text": "Single",
+                "desc": "Single"
+            },
+            {
+                "text": "Multiple",
+                "desc": "Multiple"
+            },
+            {
+                "text": "Multilevel",
+                "desc": "Multilevel"
+            },
+            {
+                "text": "Custom",
+                "desc": "Custom"
+            }
+        ],
+        "delegator": [
+       		{
+                "text": "",
+                "desc": ""
+            },
+            {
+                "text": "Supervisor",
+                "desc": "Supervisor"
+            },
+            {
+                "text": "Manager",
+                "desc": "Manager"
+            },
+            {
+                "text": "HR",
+                "desc": "HR"
+            },
+            {
+                "text": "Supervisor and Manager",
+                "desc": "Supervisor and Manager"
+            },
+            {
+                "text": "Manager and HR",
+                "desc": "Manager and HR"
+            }
+        ]
+}

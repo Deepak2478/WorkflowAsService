@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.sap.workflow.domain.OrgChart" table="ORG_CHART">
+      <meta attribute="class-description">
+         This class contains the organization detail. 
+      </meta>
+      <id name="employeeId" type="int" column="EMPLOYEE_ID">
+         <generator class="native"/>
+      </id>
+      <property name="employeeName" column="EMPLOYEE_NAME" type="string"/>
+      <property name="email" column="EMAIL" type="string"/>
+      <property name="supervisorId" column="SUPERVISOR_ID" type="int"/>
+      <property name="managerId" column="MANAGER_ID" type="int"/>
+       <property name="hrId" column="HR_ID" type="int"/>
+   </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.sap.workflow.domain.WorkflowConf" table="WORKFLOW_CONF">
+      <meta attribute="class-description">
+         This class contains the workflow detail. 
+      </meta>
+      <id name="workflowId" type="int" column="WORKFLOW_ID">
+         <generator class="native"/>
+      </id>
+      <property name="workflowName" column="WORKFLOW_NAME" type="string"/>
+      <property name="workflowTypeId" column="WORKFLOW_TYPE_ID" type="int"/>
+      <property name="delegatorId" column="DELEGATOR_ID" type="int"/>
+      <property name="actionId" column="ACTION_ID" type="int"/>
+   </class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.sap.workflow.domain.RequestTransaction" table="transaction">
+      <meta attribute="class-description">
+         This class contains the transaction details. 
+      </meta>
+      <id name="requestId" type="int" column="request_id">
+         <generator class="native"/>
+      </id>
+      <property name="employeeName" column="employee_name" type="string"/>
+      <property name="employeeEmail" column="employee_email" type="string"/>
+      <property name="firstApproverName" column="first_approver_name" type="string"/>
+      <property name="firstApproverEmail" column="first_approver_email" type="string"/>
+      <property name="secondApproverName" column="second_approver_name" type="string"/>
+      <property name="secondApproverEmail" column="second_approver_email" type="string"/>
+      <property name="statusOne" column="status_one" type="string"/>
+      <property name="statusTwo" column="status_two" type="string"/>
+      <property name="days" column="days" type="int"/>
+      <property name="requestorComments" column="requestor_comments" type="string"/>
+      <property name="approverOneComments" column="approver_one_comments" type="string"/>
+      <property name="approverTwoComments" column="approver_two_comments" type="string"/>
+   </class>
+</hibernate-mapping>

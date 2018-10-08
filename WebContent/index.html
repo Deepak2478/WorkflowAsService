@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Workflow Service</title>
+
+<STYLE type="text/css">
+.mainDiv {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -125px;
+}
+</STYLE>
+<script type="text/javascript">
+function getData(reqfor){
+	console.log("dome");
+	if(reqfor=='workflowType'){
+		jQuery.ajax({
+			type: "POST",
+			  url: "ajax",
+			  data: 'resource='+reqfor,
+			  success: function(data,textStatus,jqXHR ){
+				  alert(data);
+			  }
+			  });
+	}
+}
+</script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js" >
+</script>
+</head>
+
+
+<body onload="javascript:getData('workflowType');">
+
+<div class="mainDiv" >
+<form>
+<LABEL>Workflow Name :</LABEL> <INPUT type="text"></INPUT><BR/> 
+<LABEL>Workflow Type :</LABEL> <SELECT  ></SELECT> <BR/>
+<LABEL>Deligator :</LABEL> <SELECT ></SELECT> <BR/>
+<LABEL>Privilages :</LABEL> <INPUT type="radio" name="privRadio" value="0" >Default</INPUT><INPUT type="radio" value="1" name="privRadio">Custom</INPUT><BR/> 
+ 
+</form>
+</div>
+</body>
+
+</html>
